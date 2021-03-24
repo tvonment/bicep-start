@@ -1,0 +1,8 @@
+az upgrade
+az login
+az group create --location switzerlandnorth --name bicep-test
+
+az deployment group create \
+  --name testbicepdepl \
+  --resource-group bicep-test \
+  --template-file azuredeploy.bicep
